@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>테이블과 css</title>
+    <link rel="shortcut icon" href="./logo.ico">
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightcoral;
+            text-align: center; 
+            font-size: 10pt;
+            color: aliceblue;
+            font-weight: 900;
+            font-family: 'East Sea Dokdo', sans-serif;
+            vertical-align: top;
+        } */
+        
+        .info {
+            font-size: 20px;
+        }
+
+        .name {
+            width: 200px;
+            background-color: ivory;
+            height: 50px;
+            text-align: center;
+        }
+
+        .name:hover {
+            font-size: 30px;
+            color: blue;
+            background-color: aquamarine;
+        }
+
+        .age {
+            border: 2px dotted red;
+            font-size: 40px;
+        }
+
+        .info .job {
+            border: 3px solid yellow;
+        }
+
+        .job {
+            border: 1px solid blue;
+            width: 100px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <table class="info">
+        <tr>
+            <td class="name">이순신</td>
+            <td class="age">34세</td>
+            <td class="job">군인</td>
+        </tr>
+        <tr>
+            <td class="name">정약용</td>
+            <td class="age">39세</td>
+            <td class="job">과학자</td>
+        </tr>
+    </table>
 </body>
+
 </html>
