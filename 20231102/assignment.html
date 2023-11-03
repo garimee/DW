@@ -4,48 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title과제< /title>
+    <title>과제</title>
 </head>
 
 <style>
-    table {
-        border-collapse: collapse;
+    .topleft, .topright, .side {
+        width: 200px;
     }
 
-    td {
-        border: 2px solid black;
-        width: 75px;
-        height: 27px;
+    .left, .right {
+        width: 400px;
+    }
+
+    .topmiddle {
+        width: 600px;
+    }
+
+    .top td {
+        border: 3px solid red;
+    }
+
+    .content td {
+        border: 1px solid black;
+    }
+
+    .top {
+        height: 200px;
+    }
+
+    .content {
+        height: 600px;
+    }
+
+    .left {
+        background-color: orange;
+    }
+
+    .right {
+        background-color: limegreen;
+    }
+
+    .side {
+        background-color: khaki;
+    }
+
+    .box {
+        border-collapse: collapse;
     }
 </style>
 
 <body>
-    <table>
-        <tr>
-            <td>1</td>
-            <td colspan="3">2</td>
-            <td>5</td>
+    <table class="box">
+        <tr class="top">
+            <td class="topleft"></td>
+            <td class="topmiddle" colspan="3"></td>
+            <td class="topright"></td>
         </tr>
-        <tr>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td rowspan="4">10</td>
+        <tr class="content">
+            <td class="left" colspan="2"></td>
+            <td class="right" colspan="2"></td>
+            <td class="side"></td>
         </tr>
-        <tr>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-            <td>19</td>
-        </tr>
-        
     </table>
 </body>
 
