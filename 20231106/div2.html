@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+            width: 500px;
+            height: 350px;
+            background-color: paleturquoise;
+            padding-top: 200px;
+            box-sizing: border-box;
+        }
+
+        #div1Child1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-left: 250px;
+        }
+
+        #div1Child2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-left: 100px;
+        }
+
+        #div2 {
+            width: 200px;
+        }
+
+        #div2 img {
+            width: 100%;
+            opacity: 0.4;
+            transition: all 1s ease;
+        }
+
+        #div2 h2 {
+            margin-top: -50px;
+        }
+
+        #div2:hover img {
+            opacity: 1;
+        }
+
+        #div3 {
+            width: 200px;
+            height: 300px;
+            background-image: url(./static/images/books.jpg);
+            background-size: cover;
+            background-position: center;
+            /* background-repeat: no-repeat 배경 이미지 반복 여부 */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="div1Child1">child1</div>
+        <div id="div1Child2">child2</div>
+    </div>
+
+    <div id="div2">
+        <img src="./static/images/books.jpg" alt="책">
+        <h2>책책책</h2>
+    </div>
+
+    <div id="div3">
+
+    </div>
+</body>
+
+</html>
