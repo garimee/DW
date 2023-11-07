@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box1 {
+            width: 500px;
+            height: 500px;
+            background-color: plum;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        #child1 {
+            width: 100px;
+            height: 150px;
+            background-color: green;
+            position: absolute;
+            left: 150px;
+            top: 30px;
+        }
+
+        #child2 {
+            width: 100px;
+            height: 50px;
+            background-color: burlywood;
+            position: relative;
+            top: 100px;
+            right: 50px;
+        }
+
+        #topButton {
+            position: fixed;
+            right: 100px;
+            top: 200px;
+        }
+        
+        #menu {
+            position: sticky;
+            top: 100px;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">홈 지상최대공모정 시리즈에디션</div>
+    <div id="box1">
+         <div id="child1"></div>
+         <div id="child2"></div>
+         <div id="topButton">top</div>
+    </div>
+
+
+    <div style="height: 800px;"></div>
+</body>
+
+</html>
