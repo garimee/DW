@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #menuWrap {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #222845;
+            color: white;
+        }
+
+        .menu {
+            display: inline-block;
+            padding: 15px 30px;
+            position: relative;
+        }
+
+        .menu:hover {
+            background-color: white;
+            color: #222845;
+            cursor: pointer;
+        }
+
+        .sub {
+            display: none;
+            position: absolute;
+            top: 51.6px;
+            background-color: antiquewhite;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .menu:hover .sub {
+            display: block;
+        }
+
+        #main {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .image {
+            width: 400px;
+            display: inline-block;
+            right: 0;
+            top: 0;
+            position: relative;
+            transition-property: width, right, top;
+            transition-duration: 1s, 1s, 1s;
+        }
+
+        .image img {
+            width: 100%;
+        }
+
+        .imgBox {
+            height: 300px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+
+        .imgBox:hover .image {
+            width: 200px;
+            position: relative;
+            right: 150px;
+            top: 75px;
+        }
+
+        .detail {
+            display: none;
+        }
+
+        .imgBox:hover .detail {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/snack?random=1" alt="과자1">
+            </div>
+
+            <div class="detail">
+                과자과자 <br>
+                과아자과아자 <br>
+                과아자아과아자아
+            </div>
+        </div>
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/snack?random=2" alt="과자2">
+            </div>
+        </div>
+
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/snack?random=3" alt="과자3">
+            </div>
+        </div>
+
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/snack?random=4" alt="과자4">
+            </div>
+        </div>    
+    </main>
+
+    <div id="menuWrap">
+        <div class="menu">
+            HOME
+        </div>
+
+        <div class="menu">
+            자동차
+            <div class="sub">
+                <div class="subMenu">시승신청</div>
+                <div class="subMenu">판매순위</div>
+            </div>
+        </div>
+
+        <div class="menu">
+            증권
+            <div class="sub">
+                <div class="subMenu">주요주식</div>
+                <div class="subMenu">국내주식</div>
+                <div class="subMenu">해외주식</div>
+            </div>
+        </div>
+
+        <div class="menu">
+            영화
+        </div>
+
+        <div class="menu">
+            웹툰
+        </div>
+    </div>
+</body>
+
+</html>
