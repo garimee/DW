@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .study {
+            padding: 50px 10px;
+            border-bottom: 1px solid black;
+        }
+
+        .tc {
+            padding-left: 10px;
+        }
+
+        .tag,
+        .css {
+            width: 500px;
+            display: inline-block;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="study">
+        <h3>텍스트 태그와 css</h3>
+        <div class="tc">
+            <div class="tag">
+                <pre>
+                    &lt b &gt 글씨 굵게 &lt /b &gt
+                    &lt strong &gt 글씨 굵게 (문장 강조) &lt /strong &gt
+                    &lt h1~6 &gt 글의 제목 &lt /h1 &gt
+                    &lt p &gt 문단의 표현 &lt /p &gt
+                    &lt br &gt 텍스트 줄바꿈 &lt /br &gt
+                    &lt blockquote &gt 텍스트의 인용문 (안쪽 들여쓰기) &lt /blockquote &gt
+                    &lt q &gt  텍스트의 인용문 (줄바꿈 없음) &lt /q &gt
+                    &lt pre &gt 텍스트에 서식 지정 (작성한 내용 그대로 표현) &lt /pre &gt
+                    &lt figure &gt 독립적인 컨텐츠 표현 &lt /figure &gt
+                    &lt hr &gt 장면 전환, 구획 내 주제 변경, 문단 분리 &lt &gt
+                    &lt i &gt 이탤릭체 &lt /i &gt
+                    &lt em &gt 텍스트의 강조, 중첩 사용 가능 &lt /em &gt
+                    &lt mark &gt 텍스트 중요 표시 &lt /mark &gt
+                    &lt small &gt 덧붙이는 글, 저작권과 법률 같은 거 &lt /small &gt
+                    &lt sup &gt 위로 글씨 첨자 &lt /sup &gt
+                    &lt sub &gt 아래로 글씨 첨자 &lt /sub &gt
+                    &lt del &gt 제거 텍스트 &lt /del &gt 
+                    &lt insert &gt 추가된 텍스트 &lt /insert &gt
+                    &lt u &gt 텍스트에 밑줄 &lt /u &gt
+                    &lt kdb &gt &lt /kdb &gt <kdb>Ctrl</kdb>+<kbd>R</kbd>
+                </pre>
+            </div>
+        </div>
+        <div class="css">
+            <pre>
+                font-size: 20px; > 글씨 크기를 20px로 설정
+                font-weight: 700; > 글씨 굵기를 700으로 설정, 100 단위, 클수록 굵어짐
+                font-family:'궁서'; > 글꼴 설정
+                color: red; > 글씨 색상
+                text-decoration: underline; > 글씨 장식 설정
+                text-transform: lowercase; > 대문자를 소문자로 변환
+                text-align: center; > 텍스트 정렬 (수평 정렬)
+                letter-spacing: -2px; > 글자 사이의 간격
+                line-height: 30px' > 행 높이
+            </pre>
+        </div>
+    </div>
+
+    <div class="study">
+        <h3>공간(영역) 태그와 css</h3>
+        <div class="tc">
+            <div class="tag">
+                <pre>
+                    &lt table &gt
+                        &lt tr &gt
+                            &lt td &gt &lg /td &lt
+                            &lt td &gt &lg /td &lt
+                        &lt /tr &gt
+                        &lt tr &gt
+                            &lt td &gt &lg /td &lt
+                            &lt td &gt &lg /td &lt
+                        &lt /tr &gt
+                    &lg /table &lt    
+                    > 테이블 태그, 줄과 행 표현, 줄 tr, 행 td 
+
+                    &lt div &gt &lt /div &gt > 한 블럭을 표현, 지정한 크기만큼 영역 표시 가능
+
+                    &lt fieldset &gt &lt /fieldset &gt > 그룹 지정
+
+                    &lt header &gt &lt /header &gt > 메뉴, 로고, 머리 부분
+
+                    &lt main &gt &lt /main &gt > 본문 내용
+
+                    &lt footer &gt &lt /footer &gt > 바닥글, 페이지 정보 등
+
+                    &lt nav  &gt &lt /nav &gt > 메뉴 사용
+
+                    &lt section &gt &lt /section &gt > 본문의 글 주제별로 사용
+
+                    &lt span &gt &lt /span &gt > div보다 작은 영역 (줄바꿈 없음)
+                </pre>
+            </div>
+
+            <div class="css">
+                <pre>
+                    display > 공간 차지 속성 (block, inline-block, flex, grid 등)
+                    position > 태그의 위치 지정 (top, right, left, bottom)
+                    width > 태그의 너비
+                    height > 태그의 높이
+                    margin > 태그의 바깥쪽 여백
+                    padding > 태그의 안쪽 여백
+                    background > 태그의 배경색, 이미지 지정
+                    border > 태그의 테두리선
+                    box-shadow > 그림자 효과 
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
