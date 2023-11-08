@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+
+    <style>
+        #box1 {
+            background-color: burlywood;
+            width: 440px;
+            padding: 15px 0;
+        }
+
+
+        #bold {
+            background-color: darkslateblue;
+            width: 200px;
+            height: 100px;
+            display: none; 
+        }
+
+        .menu {
+            padding: 0 20px;
+        }
+
+        #box2 {
+            width: 800px;
+            background-color: mediumpurple;
+            color: antiquewhite;
+        }
+
+        .menuList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .menuList li {
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <span class="menu">HOME</span>
+        <span class="menu">자동차</span>
+        <span class="menu">스포츠</span>
+        <span class="menu">영화</span>
+        <span class="menu">웹툰</span>
+    </div>
+
+    <h3>나는 헤드라인</h3>
+
+    <b id="bold">굵은 글씨</b>
+
+    <i>테스트</i>
+
+    <div id="box2">
+        <ul class="menuList">
+            <li>HOME</li>
+            <li>자동차</li>
+            <li>스포츠</li>
+            <li>영화</li>
+            <li>웹툰</li>
+        </ul>
+    </div>
+</body>
+
+</html>
