@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #textBox1 {
+            width: 300px;
+            height: 100px;
+            overflow: hidden;
+            border: 1px solid black;
+            padding: 10px;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 5; /* 줄 길이 표시 */
+            word-wrap: break-word; /* 지정된 크기에서 줄바꿈 허용 (white-space: normal와 같은 의미) */
+            display: -webkit-box; 
+            -webkit-box-orient: vertical; 
+        }
+
+        #ellipse {
+            width: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; /* white-space > 자동 줄바꿈을 어떻게 처리할지 정하는 속성*/
+        }
+    </style>
+</head>
+
+<body>
+    <p id="ellipse">
+        동해 물과 백두산이 마르고 닳도록
+    </p>
+    <div id="textBox1">
+        동해 물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한 사람 대한으로 길이 보전하세
+        남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세 무궁화 삼천리 화려강산 대한 사람 대한으로 길이 보전하세 
+    </div>
+</body>
+
+</html>
