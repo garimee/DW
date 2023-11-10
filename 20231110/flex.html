@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .item:nth-child(1) {
+            background-color: yellow;
+            width: 30%;
+        }
+
+        .item:nth-child(2) {
+            background-color: red;
+            width: 30%;
+        }
+
+        .item:nth-child(3) {
+            background-color: blue;
+            width: 30%;
+        }
+
+        .item:nth-child(4) {
+            background-color: orange;
+            width: 30%;
+        }
+
+        .item:nth-child(5) {
+            background-color: green;
+            width: 30%;
+        }
+
+        .item:nth-child(6) {
+            background-color: purple;
+            width: 30%;
+        }
+
+        #container1 {
+            border: 3px solid black;
+            display: flex;
+            width: 300px;
+            height: 100px;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        #container1 .item {
+            width: 30%;
+        }
+
+        #container2 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .a {
+            width: 300px;
+            height: 100px;
+            align-items: stretch;
+        }
+
+        .b {
+            align-self: start;
+        }
+
+        #container3 {
+            border: 2px solid black;
+            width: 400px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: end;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <br><br>
+
+    <div id="container2">
+        <div class="item">1</div>
+        <div class="item a">2</div>
+        <div class="item b">3</div>
+    </div>
+
+    <br><br>
+
+    <div id="container3">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+
+</html>
+
+<!-- display: flex; > flex가 적용된 태그의 하위 태그들을 어떻게 배치할 것인가, 하위 태그들 크기를 키우거나 줄이거나 위치를 옮기거나 할 수 있다 
+     ㄴ container > display: flex; 가 적용된 태그를 컨테이너라고 부른다
+     ㄴ item > 컨테이너의 하위 태그들을 플렉스 아이템이라고 한다
+     ㄴ 주축 > 아이템들이 배치되는 방향, 주축의 방향으로 아이템이 정렬 배치가 된다
+     ㄴ 교차축 > 주축을 교차하는 축, 교차축으로 아이템을 정렬시킬 수 있다
+
+     justify-content > 주축 방향으로 설정하기 위한 속성
+     ㄴ start > 주축의 시작 부분에 배치 
+     ㄴ end > 주축의 끝부분에 배치
+     ㄴ center > 주축의 가운데에 배치
+     ㄴ space-around > 양쪽 끝에 조금 간격을 주고 아이템들 사이에 동일한 간격으로 배치
+     ㄴ space-between > 양쪽 끝에 첫 번째 아이템과 마지막 아이템을 배치하고 동일한 간격으로 배치
+     ㄴ space-evenly > 주축의 가운데를 중심으로 모든 아이템의 간격을 동일하게 배치 
+    
+     align-items > 교차축에 정렬하기 위한 속성
+     ㄴ start > 교차축의 시작 부분에 배치
+     ㄴ center > 교차축의 가운데에 배치
+     ㄴ end > 교차축의 끝에 배치
+     ㄴ stretch > 교차축 전체 사용 (교차축 크기만큼 채우기) 
+    
+     flex-direction > 주축의 방향을 바꿈 -->
