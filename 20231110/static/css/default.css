@@ -145,15 +145,30 @@
 }
 
 .build, .learn {
-
+    display: inline-block;
+    width: 350px;
+    background-color: #272731;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-
-.build {
-
+.learn {
+    margin-left: 50px;
 }
 
-.learn{}
+.build h3, .learn h3 {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.build img, .learn img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 #footer {
     margin-left: 200px;
+    background-color: #262627;
+    padding: 50px 100px;
+    line-height: 35px;
 }
