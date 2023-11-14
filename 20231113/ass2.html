@@ -6,14 +6,15 @@
     <title>Document</title>
 
     <script>
-        var red_cup= 15;
+        var red_cup = 15;
         var blue_cup = 35;
         var white_cup = 0;
         document.write("red_cup: " + red_cup + " , blue_cup : "+ blue_cup + "<br>");
 
-        var red_cup = 35;
-        var blue_cup = 15;
-        var white_cup = 0;
+        white_cup = blue_cup;
+        blue_cup = red_cup;
+        red_cup = white_cup;
+
         document.write("red_cup: " + red_cup + " , blue_cup : " + blue_cup);
     </script>
 </head>
