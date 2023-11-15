@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 논리연산자 > 참, 거짓을 연산하는 연산자 (and, or, not)
+        //(10 > 5) && (5 < 7)
+
+        // 놀이기구를 타려면 130 이상 190 이하
+        // (tall >= 130) && (tall <= 190)
+
+        // 키가 130 이상 또는 나이가 열다섯 이상
+        // (tall >= 130) || (age >= 15)
+
+        /* // 세 개의 정수 중 큰 수 출력, 세 개가 모두 같으면 같다고 출력 (여기 다시 해 보기)
+        var num1 = parseInt("첫 번째 정수");
+        var num2 = parseInt("두 번째 정수");
+        var num3 = parseInt("세 번째 정수");
+
+        var result = (num1 > num2) ? num1 : num2;
+        result = (result > num3) ? result : num3;
+        result = ( num1 == num2 && num1 == num3) ? "모두 같다. : 큰 수 :  " + result;
+        console.log(result); */
+
+        // and 연산자는 여러 개의 조건을 만들어야 되는 경우에 조건 사이사이에 그리고를 넣어서 표현했을 때 자연스러워야 한다
+
+        // or 연산자는 여러 개의 조건을 사용해서 만들어야 하는 경우 조건 사이사이에 또는을 넣어서 표현했을 때 자연스러워야 한다
+
+        // 세 개의 종이컵 중 한 군데에만 주사위가 들어있다 주사위가 들어있는 종이컵을 맞춰야 한다 맞추면 2배 주사위 위치도 맞추고 주사위 값도 맞추면 6배 주사위는 사면체
+        // var dealer = parseInt(Math.random() * 3) + 1;
+        // var dice = parseInt(Math.random() * 4) + 1;
+
+        // var user_cup = parseInt(prompt("몇 번째 종이컵 선택"));
+        // var user_dice = parseInt(prompt("주사위 값은?"));
+
+        // // (dealer == dice) ? "2배" : "꽝";
+        // // (dice == user_dice) ? "6배" : "꽝";
+
+        // var result = (dealer == dice && dice == user_dice) ? "6배" : (dealer == dice) ? "2배" : "꽝";
+
+        // console.log(result);
+
+        /* // 1 가위 2 바위 3 보
+        var com = parseInt(Math.random() * 3) + 1;
+        var user = parseInt(prompt("1. 가위 2. 바위 3. 보"));
+
+        // var result = (com == user) ? "비김" : (com == 1 && user == 2) || (com == 2 && user == 3) || (com == 3 && user == 1) ? "이김" : "패배";
+        
+        var cl = user - com;
+        var result = (cl == 0) ? "비김" : (cl == 1 || cl == -2) ? "이김" : "패배";
+        console.log(result); */
+
+        // document.write("<div class= red></div>")
+
+        /* // 사각형의 색상을 입력 (빨강, 파랑, 노랑) / 크기를 입력하세요 (1 - 100*100, 2-200*200, 3-300*300)
+        var color = prompt("색상 입력 (빨강, 노랑, 파랑)");
+        var size = prompt("크기 입력 (1, 2, 3)");
+
+        var className = (color == "빨강" && size == 1) ? "red one" : (color == "빨강" && size == 2) ? "red two" : (color == "빨강" && size == 3) ? "red three" :
+                        (color == "노랑" && size == 1) ? "yellow one" : (color == "노랑" && size == 2) ? "yellow two" : (color == "노랑" && size == 3) ? "yellow three" :
+                        (color == "파랑" && size == 1) ? "blue one" : (color == "파랑" && size == 2) ? "blue two" : (color == "파랑" && size == 3) ? "blue three" : "";
+
+        document.write(`<div class='${className}'></div>`);  // '${className}' > className이 띄어쓰기가 있으니 그걸 하나로 묶기 위해 작은따옴표를 사용함. 큰따옴표도 상관없음. */
+
+        /* var tall = 150;
+        if (tall >= 130) {
+            document.write("탑승 가능");
+        } else {
+            document.write("탑승 불가");
+        } */
+
+        /* 두 개의 정수를 입력 받아 가장 작은 숫자만 출력
+        var num1 = parseInt(prompt("첫 번째 정수"));
+        var num2 = parseInt(prompt("두 번째 정수"));
+        if ( num1 > num2 ) {
+            document.write(num2);
+        } else {
+            document.write(num1);
+        } */
+
+        /* // prompt("다음 추가 등록을 하시겠습니까? (y/n)")
+        // y 입력시 - 추가 등록을 시작합니다
+        // n 입력시 - 등록을 종료합니다
+        // 대소문자 모두 인식
+        var prog = prompt("다음 추가 등록을 하시겠습니까? (y/n)");
+
+        if (prog == "y" || prog == "Y") {
+            document.write("추가 등록을 시작합니다.");
+        } else if (prog == "n" || prog == "N") {
+                document.write("등록을 종료합니다.");
+            } */
+            
+    </script>
+    <style>
+        /* div {
+        width: 200px;
+        height: 50px;
+    }
+
+    .red {
+        background-color: red;
+    }  */
+
+        /* .red { background-color: red;}
+    .blue { background-color: blue;}
+    .yellow { background-color: yellow;}
+    .one { width: 100px; height: 100px;}
+    .two { width: 200px; height: 200px;}
+    .three { width: 300px; height: 300px;} */
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
