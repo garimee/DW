@@ -16,15 +16,16 @@
         // 키가 130 이상 또는 나이가 열다섯 이상
         // (tall >= 130) || (age >= 15)
 
-        /* // 세 개의 정수 중 큰 수 출력, 세 개가 모두 같으면 같다고 출력 (여기 다시 해 보기)
-        var num1 = parseInt("첫 번째 정수");
-        var num2 = parseInt("두 번째 정수");
-        var num3 = parseInt("세 번째 정수");
+        // 세 개의 정수 중 큰 수 출력, 세 개가 모두 같으면 같다고 출력 (여기 다시 해 보기)
+        var num1 = parseInt(prompt("첫번째 정수"));
+        var num2 = parseInt(prompt("두번째 정수"));
+        var num3 = parseInt(prompt("세번째 정수"));
 
-        var result = (num1 > num2) ? num1 : num2;
-        result = (result > num3) ? result : num3;
-        result = ( num1 == num2 && num1 == num3) ? "모두 같다. : 큰 수 :  " + result;
-        console.log(result); */
+        var result = (num1 > num2 )? num1 : num2;
+        result = ( result > num3 )? result : num3;
+        result = (num1 == num2  && num1==num3) ? "모두같다 " : "큰수 : "+result;
+        console.log(result);
+
 
         // and 연산자는 여러 개의 조건을 만들어야 되는 경우에 조건 사이사이에 그리고를 넣어서 표현했을 때 자연스러워야 한다
 
