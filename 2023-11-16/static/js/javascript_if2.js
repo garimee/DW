@@ -63,7 +63,7 @@ window.onload = function () {
             break;
     } */
 
-    var score = 75;
+    /* var score = 75;
     switch(parseInt(score / 10)) {
         case 10: case 9:
             document.write("A학점"); break;
@@ -73,7 +73,7 @@ window.onload = function () {
             document.write("C학점"); break;
         default:
             document.write("F학점"); break;
-        }
+        } */
 
         // 과제
         // 기본 주차비 천 원, 기본 시간 30분 / 30분 이내 천 원, 5분 천 원, 39분까지 천 원
@@ -83,13 +83,19 @@ window.onload = function () {
         // 8시간 이상 주차 시 - 10000원 
         // 10시간, 12시간, 9시간 43분 전부 다 10000원
         // 주차 시간을 분 단위로 입력하여 주차 요금이 얼마인지 출력
-        var time = parseInt(prompt("주차 시간"));
+        var time = parseInt(prompt("주차 시간 (분)"));
         var cost = 1000;
+        
+        if(time >= 480) {
+            cost = 10000; time = 0;;
+        } else if(time >= 240) {
+            cost = 2500; time = time - 240;
+        } else if(time >= 120) {
+            cost = 1500; time = time - 120;
+        } else {
+            time = time < 30 ? 0 : time - 30;
+        }
 
-        cost = (time >=120) ? 1500 : cost;
-
-        time = (time >= 120) ? time -120 : (time >= 30) ? time - 30 : 0;
-
-        var price = parseInt(time / 10) * 100 + cost;
-        console.log(`주차 요금: ${price}원`);
+        var price = Math.floor(time / 10) * 100 + cost;
+        document.write("주차 요금 : " + `${price}원`);
 }
