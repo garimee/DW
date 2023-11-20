@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
         // 조건식이 참일 경우에는 반복 실행할 코드들이 동작하고 조건이 거짓이 되는 순간 즉시 반복문은 종료된다
         // 반복문을 작성할 때 몇 번을 반복해야 하는지 잘 생각하고 조건을 완성해야 한다
         // 5번 반복하는 반복문을 만든다 하면 시작~끝, 1부터 5까지, a=1; a<=5; a++;
-        
+
         // for (초기값; 조건식; 증감식) > for문 작성 방법
         /* for(var i = 1; i <= 17; i++) {  // ; 두 개는 반드시 작성해야 한다
             document.write(i + "<br>");
@@ -26,10 +27,219 @@
             document.write(`${num} * ${i} = ${num * i} <br>`);
         } */
 
+        /* 정수 하나를 입력 받아 입력한 정수만큼 반복되는 반복문 만들기
+        // 내용은 반복문에 사용된 변수의 값 출력
+        var num = parseInt(prompt("정수 입력"));
+        for(var i = 1; i <= num; i++) {
+            document.write(i + " ");
+        } */
+
+        /* for(var i = 10; i > 1; i--) {
+            document.write("1씩 감소 ");
+        } */
+
+        /* for(var i = 1; i <= 10; i = i+2) {
+            document.write(i + " ");
+        } */  // 홀수만 나온다
+
+        /* for(var i = 1; i <= 10; i++) {
+            if(i%2 == 0) // 중괄호 생략은 실행되는 코드가 한 줄일 경우
+                document.write(i + " ");
+        } */
+
+        /* 1부터 100까지 중에서 5의 배수만 출력
+        for(var i = 1; i <= 100; i++) {
+            if(i % 5 == 0)
+                document.write(i + " ");
+        } 
         
+        for(var i = 5; i <= 100; i = i+5) {   // 5의 배수만 출력하는 다른 방법
+            document.write(i + " ");
+        } */
+
+        /* 1부터 100까지 중 4의 배수이며 6의 배수인 공배수를 출력
+        for(var i = 1; i <= 100; i++) {
+            if(i % 4 == 0 && i % 6 == 0)
+                document.write(i + " ");
+        } */
+
+        /* var sum = 0;
+        for( var i = 1; i <= 10; i++) {
+            sum = sum + i;
+        }
+        document.write("1부터 10까지의 총합: " + sum + "<br>"); */
+
+        /* 동전 앞면 뒷면
+        var ok = 0;
+        for (var i = 1; i <= 10; i++) {
+            var coin = Math.floor(Math.random() * 2) + 1;
+            var user = prompt("동전 앞, 뒷면 입력 (앞, 뒤)");
+            if ((coin == 1 && user == "앞") || (coin == 2 && user == "뒤")) {
+                document.write(`정답!  동전 : ${coin}, 나 : ${user} <br>`);
+                ok++;
+            } else {
+                document.write(`땡!  동전 : ${coin}, 나 : ${user} <br>`);
+            }
+        }
+        document.write("정답 횟수: " + ok + "번 <br>"); */
+
+        /* 가위바위보 10판 진행, 게임이 끝나면 몇 승 몇 패 몇 무 출력
+        var win = 0; lose = 0; draw = 0;
+        for (var i = 1; i <= 10; i++) {
+            var com = Math.floor(Math.random() * 3) + 1;
+            var user = parseInt(prompt("가위바위보 게임"));
+            if (com == user) {
+                document.write("비김!", "<br>"); 
+                draw++;
+            } else if ((com == "1" && user == "2") || (com == "2" && user == "3") || (com == "3" && user == "1")) {
+                document.write("승리!", "<br>"); 
+                win++;
+            } else {
+                document.write("패배!", "<br>"); 
+                lose++;
+            }
+        }
+        document.write(`${win}승, ${lose}패, ${draw}무`); */
+
+        /* var num = parseInt(prompt("몇 개"));
+        for(var i = 1; i <= num; i++) {
+            var img = `<div><img src="https://loremflickr.com/200/200?random=${i}" alt="이미지"></div>`;
+            document.write(img);
+        } */
+
+        /* for(var i = 1; i <= 4; i++) {
+            for(var k = 1; k <= 3; k++) {
+                document.write(k + "중첩");
+            }
+            document.write("<br>");
+        } */
+
+        /* 구구단 전체 출력
+        for (var i = 2; i <= 9; i++) {
+            for(var k = 1; k <= 9; k++) {
+                document.write(`${i} * ${k} = ${i * k} <br>`);
+            }
+        } */
+
+        // 반복문이 필요한 상황에서 한 번만 실행되는 코드를 반복문 없이 작성한다
+        // 작성된 코드에 반복문을 감싸준다
+        // 반복적으로 실행될 코드는 그대로 두고 반복적으로 실행되면 안 되는 코드들을 선별하여 반복문 밖으로 이동시킨다
+
+        /* 숫자 상관없이 홀수 칸만 빨간색으로 배경 표시 
+        var row = parseInt(prompt("테이블 몇 줄"));
+        var col = parseInt(prompt("테이블 몇 칸"));
+
+        var table = "<table>";
+        for (var i = 1; i <= row; i++) {
+            table += "<tr>";
+            for (var k = 1; k <= col; k++) {
+                var num = (i - 1) * col + k;
+                if (k % 2 == 1)
+                    table += "<td style='background: red;'>" + num + "</td>";
+                else 
+                    table += "<td>" + num + "</td>";
+            } 
+            table += "</tr>";
+        }
+        table += "</table>";  // table = table + "</table>" 
+        document.write(table); */
+
+        // 반복문의 무한 반복 > 몇 번 반복해야 하는지 정해지지 않은 경우
+        // 정수 입력 -> 그만 입력하기 위해 0을 입력
+        // 동전 앞면 뒷면 맞추기 게임을 하는데 정답을 맞출 때까지 게임을 계속하도록 한다면 언제 정답을 맞추게 될지 알 수 없기 때문에 무한 반복이 필요하다
+
+        /* for(; true;) {
+            var coin = Math.floor(Math.random() * 2) + 1;
+            var user = parseInt(prompt("1. 앞 2. 뒤"));
+            if (coin == user) {
+                document.write("정답");
+                break;
+            } else {
+                document.write("오답");
+            }
+        } */
+
+        // 무한 루프 안에서 랜덤값 구하기 (범위 1 ~ 100)
+        // 랜덤값이 7의 배수일 경우 반복문 중단
+        // 반복문이 끝날 때까지 나온 랜덤값은 출력
+
+        /* for(;true;) {
+            var num = Math.floor(Math.random() * 100) + 1;
+            document.write(num + "<br>");
+            if(num % 7 == 0) 
+            break;
+        } */
+
+        /* 무한루프, 나이 입력
+        // 내가 입력한 나이를 토대로 출생년도를 구하고 랜덤범위(1950~2003), 랜덤값 중에서 내 출생년도가 나오기까지 몇 번의 반복문이 동작했는지 출력
+        var age = 0;
+        for (; age < 20;) {
+            age = parseInt(prompt("나이 입력"));
+        }
+        var birth_year = 2023 - age;
+        var count = 0;
+        for (;true;) {
+            var year = Math.floor(Math.random() * 54) + 1950;
+            count++;
+            if (year == birth_year)
+                break;
+        }
+        document.write(count + "번만에 나왔다"); */
+
+        /* var com = Math.floor(Math.random() * 50) + 1;
+        for(;true;) {
+            var user = parseInt(prompt("업다운 게임"));
+            if(user > com) {
+                alert("다운");
+            } if(user < com) {
+                alert("업");
+            } if(user == com) {
+                alert("정답");
+                break;
+            }
+        } */
+
+        /* 지정한 알파벳의 개수가 몇 개인지 구하기
+        var word = "international prototype";
+        var alp = "o";
+        var count = 0;
+        for(var i = 0; i < word.length; i++) {
+            if(word.charAt(i) === alp) {
+                count++;
+            }
+        }
+        document.write(`${alp} 알파벳은 총 ${count}개 있다`); */
+        
+        for(var i = 1; i <= 100; i++) {
+            if(i % 3 == 0 && i % 10 == 0) {
+                document.write("<div>pizzle buzzle</div>");
+            } else if(i % 3 == 0) {
+                document.write("<div>pizzle</div>");
+            } else if(i % 10 == 0) {
+                document.write("<div>buzzle</div>");
+            } else {
+            document.write(i + " ");
+            }
+        }
+
+        // 과제: 내가 제시한 거를 컴퓨터가 맞춰야 하는 업다운 게임 (document.write)
     </script>
+
+    <style>
+        /* table {
+            border-collapse: collapse;
+        }
+
+        table tr td {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+        } */
+    </style>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
