@@ -21,8 +21,8 @@ let num = [10, 20, 30, 40, 50, 60];
   }
 } */
 
-let num1 = [1, 2, 3];
-let num2 = [4, 5, 6];
+/* let num1 = [1, 2, 3];
+let num2 = [4, 5, 6]; */
 
 // 두 배열에 같은 인덱스 위치에 있는 숫자들끼리의 합 출력
 // 결과 > 5 7 9
@@ -31,7 +31,7 @@ let num2 = [4, 5, 6];
 } */
 
 // num1과 num2 배열에서 짝수에 해당하는 숫자만 num3이라는 배열에 저장하고 출력
-let num3 = new Array();
+/* let num3 = new Array();
 
 for (var i = 0; i < num.length; i++) {
   if (num1[i] % 2 == 0)
@@ -40,7 +40,7 @@ for (var i = 0; i < num.length; i++) {
   if (num2[i] % 2 == 0)
   num3.push(num2[i]);
 }
-document.write(num3.sort() + " ");
+document.write(num3.sort() + " "); */
 
 // 과제
 // 한화이글스 투수들의 평균 자책점
@@ -48,3 +48,11 @@ document.write(num3.sort() + " ");
 // era = [1.96, 2.45, 2.63, 3.23, 3.60, 3.65, 3.38] (era > 평균자책점)
 // 7명 선수들의 평균자책점의 평균치를 구하라
 // 평균치 이상인 선수들이 누군지 출력
+
+const name = ["주현상", "윤대경", "이민우", "이태양", "페냐", "박상원", "장시환"];
+const era = [1.96, 2.45, 2.63, 3.23, 3.60, 3.65, 3.38];
+
+for(var i = 0; i < era.length; i++) {
+  
+}
+
