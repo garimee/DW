@@ -61,6 +61,6 @@ var avg = total / era.length;  // 평균자책점 평균 구하기
 
 for(var i = 0; i < era.length; i++) {
   if(avg <= era[i]) {  // 평균자책점 평균 이상인 값 찾기
-    document.write(name[i] + " ");  // 평균자책점 평균 이상인 값의 인뎃그를 name의 인덱스로 사용
+    document.write(name[i] + " ");  // 평균자책점 평균 이상인 값의 인덱스를 name의 인덱스로 사용
   }
 }
