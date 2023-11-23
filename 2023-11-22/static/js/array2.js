@@ -51,8 +51,16 @@ document.write(num3.sort() + " "); */
 
 const name = ["주현상", "윤대경", "이민우", "이태양", "페냐", "박상원", "장시환"];
 const era = [1.96, 2.45, 2.63, 3.23, 3.60, 3.65, 3.38];
+var total = 0;  // 평균자책점의 총점을 구하기 위한 누적 변수
 
 for(var i = 0; i < era.length; i++) {
-  
+  total += era[i];  // 평균자책점 총점 구하기
 }
 
+var avg = total / era.length;  // 평균자책점 평균 구하기
+
+for(var i = 0; i < era.length; i++) {
+  if(avg <= era[i]) {  // 평균자책점 평균 이상인 값 찾기
+    document.write(name[i] + " ");  // 평균자책점 평균 이상인 값의 인뎃그를 name의 인덱스로 사용
+  }
+}
