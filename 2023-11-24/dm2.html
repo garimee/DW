@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script>
+        // id가 name인 곳에 이름을 입력하여 성적 조회 버튼을 클릭
+        // 입력한 이름의 성적을 국어: 점 이렇게 출력
+        // 이름이 없는 학생 검색 시 등록되지 않은 학생입니다 라고 출력
+        // id가 avg인 곳에 평균 점수를 입력하고 검색 버튼 클릭
+        // 입력한 평균 점수 이상인 학생들의 이름 출력
+        // 해당되는 학생이 없을 시 조건에 맞는 학생이 없습니다 출력
+
+        let name = ["김", "이", "박", "최", "정", "한"];
+
+        let score = [ // [국어, 수학, 영어, 총점, 평균]
+            [78, 87, 54, 219, 73],  // 김
+            [80, 70, 60, 210, 70],  // 이
+            [88, 99, 65, 252, 84],  // 박
+            [94, 34, 87, 215, 71],  // 최
+            [10, 20, 30, 60, 20],  // 정
+            [1, 2, 3, 6, 2]  // 한
+        ];
+
+        let total = 0;
+        let avg = 0;
+        let idx = 0;
+
+        function search() {
+            var input_name = $("#name").val(); // input 태그에 입력한 이름 가져오기
+            var index = name.indexOf(input_name);  // name 배열에서 입력한 이름 찾아 인덱스 얻기
+            if(index == -1)
+            $("#result").html("등록되지 않은 학생입니다.");
+            else {
+                $("#result").html(`국어: ${score[index][0]}점 수학: ${score[index][1]}점 영어: ${score[index][2]}점 평균: ${score[index][4]}점`);
+            }
+        }
+
+        function over() {
+            var avg_num = parseInt($("#avg").val());
+
+            var output = "";
+            for(var i = 0; i < score.length; i++) {
+                if(score[i][4] >= avg_num) {
+                    output += name[i] + " ";
+                }
+            }
+            if(output == "")
+                output = "조건에 맞는 학생이 없습니다.";
+            $("#result").html(output);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <input type="text" id="name">
+        <button onclick="search()">성적 조회</button>
+    </div>
+    <div>
+        <input type="text" id="avg">
+        <button onclick="over()">검색</button>
+    </div>
+    <div id="result"></div>
+</body>
+
+</html>
