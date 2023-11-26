@@ -26,11 +26,24 @@ $(function () {
 function endgame() {
   var row = 0;
   var col = 0;
-  var cro1 = 0;
-  var cro2 = 0;
-  var count = 0;
+  var cross = 0;
 
-  for (var i = 0; i < board.length; i++) {
-    for (var k = 0; k < board[i].length; k++) {}
+  for(var i = 0; i < board.length; i++) {
+    var check = false;
+    for(var k = 0; k < board[i].length; k++) {
+      if(board[i][k] == 0) {
+        check = true;
+      } else {
+        var check = false;
+        break;
+      }
+    }
+    if(check) row++;
+  }
+  for(var i = 0; i < board[0].length; i++) {
+    var check = false;
+    for(var k = 0; k < board[i].length; k++) {
+      var check = true;
+    }
   }
 }
