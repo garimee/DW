@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get" action="login_check.jsp">
+        <input type="text" name="text1" placeholder="입력"> <br>
+        <input type="password" name="pass"> <br>
+        <input type="number" name="number" min="1" max="10"> <br>
+        <input type="color" name="color"> <br>
+        <input type="date" name="date" min="2003-01-01" max="2023-11-27"> <br>
+        <input type="month" name="month"> <br>
+        <input type="datetime-local" name="datetime-local"> <br>
+        <input type="email" name="email" required> <br>
+        <input type="image" name="image" src="https://loremflickr.com/50/50"> <br>
+        <input type="button" name="button" value="가입">
+        <input type="submit" name="submit" value="전송">
+        <input type="reset" name="reset" value="초기화">
+        <input type="time" name="time"> <br>
+        <input type="week" name="week"> <br>
+        <input type="tel" name="tel" pattern="[0~9]{3}-[0~9]{4}-[0~9]{4}"> <br>
+        <input type="url" name="url"> <br>
+        <input type="range" name="range" min="100" max="200" step="10"> <br>
+        <input type="checkbox" name="checkbox"> <br>
+        <input type="radio" name="radio"> <br>
+        <input type="file" name="file"> 
+        <input type="hidden" name="hidden"> <br><br>
+
+        <textarea name="memo"></textarea> <br>
+
+        <select name="game" multiple>
+            <option value="lol">롤</option>
+            <option value="gta">gta</option>
+            <option value="overwatch">옵치</option>
+        </select>
+
+        <input list="lang">
+        <datalist id="lang" name="language">
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="js">js</option>
+        </datalist>
+    </form>
+
+    <form oninput="res.value = parseInt(a.value) + parseInt(b.value)">
+        <input type="number" id="a" name="a"> + <input type="number" id="b" name="b"> = <output name="res" for="a b"></output>
+    </form>
+</body>
+
+</html>
+
+<!-- form 속성 - id, class, name (이름 지어주기)
+    method - 전송하는 방법 || get > 데이터를 있는 그대로 서버에 전달(데이터 노출), post > 데이터를 변환하여 서버에 전달(압축, 암호화) 
+    action - 데이터 전송할 곳을 지정
+    enctype - 데이터 형식 지정 (이미지, 동영상, 음악 등등) > :multipart/form-data 
+    데이터가 입력, 선택된 태그에 반드시 name이 존재해야 데이터 전송 가능 
+    checkbox는 여러 데잍터를 그룹화하여 사용하는 input 태그, 반드시 그룹으로 묶어 주기 위해서는 name이 같아야 한다 -->

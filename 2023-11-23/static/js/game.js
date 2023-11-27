@@ -33,8 +33,6 @@ function endgame() {
     for(var k = 0; k < board[i].length; k++) {
       if(board[i][k] == 0) {
         check = true;
-      } else {
-        var check = false;
         break;
       }
     }
@@ -43,7 +41,9 @@ function endgame() {
   for(var i = 0; i < board[0].length; i++) {
     var check = false;
     for(var k = 0; k < board[i].length; k++) {
-      var check = true;
+      if(board[k][i] == 0) {
+        
+      }
     }
   }
 }
