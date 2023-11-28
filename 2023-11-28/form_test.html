@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <style>
+        .checkWrap { 
+            width: 300px;
+        }
+
+        .listBox {
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #pass {
+            width: 180px;
+        }
+    </style>
+
+    <script>
+        $(function() {
+            $("#allchk").on("click", function() {
+                var isCheck = $(this).is(":checked");  // 체크박스의 체크 여부
+                if(isCheck)
+                    $(".agree").prop("checked", true);
+                else
+                    $(".agree").prop("checked", false);
+            });
+
+            // 클래스명이 agree인 체크박스에 하나씩 체크하거나 전체 체크된 경우 하나 이상
+            // 체크 해제 했을 때 모두 동의 체크박스의 체크를 해제
+            $(".agree").on("click", function() {
+                var chk_cnt = $(".agree:checked").length;  // 체크박스의 체크 개수
+                var all_cnt = $(".agree").length;  // 전체 체크박스 개수
+                if(chk_cnt == all_cnt)
+                    $("#allchk").prop("checked", true);
+                else
+                $("#allchk").prop("checked", false);
+            });
+
+            $("#pass").on("click", function() {
+                var chk_cnt = $(".agree:checked").length;  // 체크박스의 체크 개수
+                var all_cnt = $(".agree").length;  // 전체 체크박스 개수
+                if(chk_cnt != all_cnt) {
+                    alert("모두 체크해 주세요");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form method="get" action="pass.html">
+        <div class="checkWrap">
+            <div class="allBox">
+                <input type="checkbox" name="allchk" id="allchk">모두 동의
+            </div>
+            <div class="listBox">
+                <span><input type="checkbox" name="agr" class="agree" value="개인정보">개인정보 활용</span>
+                <span><input type="checkbox" name="agr" class="agree" value="정보 제공">정보 제공</span>
+                <span><input type="checkbox" name="agr" class="agree" value="이벤트 알림">이벤트 알림</span>
+                <span><input type="checkbox" name="agr" class="agree" value="보험 가입">보험 가입</span>
+            </div>
+        </div>
+        <button type="button" id="pass">다음 진행</button>
+    </form>
+</body>
+
+</html>
