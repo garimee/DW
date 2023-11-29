@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+#wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#header {
+    width: 100%;
+    background-color: darksalmon;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav {
+    width: calc(100% - 50px);
+    background-color: mintcream;
+    height: 30px;
+}
+
+.logo {
+    width: 50px;
+    background-color: firebrick;
+    height: 50px;
+}
+
+#main {
+    padding: 50px 0;
+    background-color: khaki;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.item {
+    width: 30%;
+}
+
+#footer {
+    width: 100%;
+    padding: 20px 50px;
+    background-color: darkcyan;
+    position: relative;
+}
+
+#footer .logo {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+.addr {
+    width: 70%;
+    height: 20px;
+    background-color: darkgoldenrod;
+}
+
+.tel {
+    width: 30%;
+    height: 20px;
+    background-color: chocolate;
+}
+
+/* 태블릿용 */
+@media screen and (max-width:1024px) {
+
+    #nav {
+        order: 2;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .item {
+        width: 45%;
+    }
+
+    #footer .logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* 스마트폰 세로 */
+@media screen and (max-width:480px) {
+    v
+    #header {
+        justify-content: space-between;
+    }
+
+    #nav {
+        width: 50px;
+    }
+
+    .item {
+        width: 90%;
+    }
+}
