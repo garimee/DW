@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <style>
-        /* #loading1 {
+        #loading1 {
             width: 500px;
             height: 500px;
             background-color: cadetblue;
@@ -41,11 +41,11 @@
 
         @keyframes loading1 {
             0% {left: -145px;}
-            50% {left: (calc(100% - 50px));}
+            50% {left: calc(100% - 50px);}
             100% {left: -145px;}
         }
 
-        #loading2 {
+        /* #loading2 {
             width: 500px;
             height: 500px;
             background-color: black;
@@ -150,7 +150,7 @@
 
         @keyframes dice {
             100% {transform: rotateY(360deg) rotateX(720deg) rotateZ(1080deg);}
-        } */
+        } 
 
         img {width: 100%;}
 
@@ -169,15 +169,15 @@
         @keyframes move {
             0% {width: 30px; height: 30px; top: 0;}
             100% {width: 1000px; height: 1000px; top: 50%; transform: translate(-50%, -50%); border-radius: 0;}
-        }
+        } */
     </style>
 </head>
 
 <body>
 
-    <div id="box">
+    <!-- <div id="box">
         <img src="./static/images/christmas.jpg" alt="이미지">
-    </div>
+    </div> -->
 
     <!-- 이미지 1장 필요
         1. 처음에 이미지 크기는 30, 30 타원형
@@ -196,7 +196,7 @@
             <div class="number five">5</div>
             <div class="number six">6</div>
         </div>
-    </div>
+    </div> -->
 
     <div id="loading1">
         <div class="loader"></div>
@@ -204,7 +204,7 @@
         <div class="loader"></div>
     </div>
 
-    <div id="loading2">
+    <!-- <div id="loading2">
         <div class="ring">
             <div class="ball_load">
                 <div class="ball"></div>
