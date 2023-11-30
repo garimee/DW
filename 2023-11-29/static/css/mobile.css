@@ -72,6 +72,7 @@ img {
     width: 100%;
     background-color: dodgerblue;
     padding: 50px;
+    position: relative;
 }
 
 .addr, .tel {
