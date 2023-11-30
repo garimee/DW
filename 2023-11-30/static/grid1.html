@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+
+    <style>
+        /* #container {
+            width: 100%;
+            display: grid; */
+        /* repeat(반복 횟수, 크기), fr은 fraction(분수, 비율, 등분) */
+        /* 채우기 : auto-fill > 한 줄에 들어가는 아이템 개수 자동 계산, auto-fit > 한 줄에 남는 공간 없이 채워 주기 */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* grid-template-rows: repeat(2, 50px); */
+            
+            /* grid-auto-columns: 250px; */
+            /* grid-auto-rows: 50px;
+            gap: 10px 20px; */
+
+            /* column-gap: 20px; 열과 열 사이의 간격 (셀과 셀 사이)
+            row-gap: 10px; 행과 행 사이 간격
+            gap: a b - a는 행 b는 열*/
+        /* } */
+
+        /* #container2 {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 800px;
+                grid-auto-rows: 80px;
+                gap: 10px;
+        } */
+        /* 
+            그리드 아이템들의 위치 및 확장은 그리드 라인 번호로 한다
+            열의 개수가 5개라면 열 번호는 6번까지
+            grid-template-columns에서 그리드 아이템을 4개로 저장했다면 그리드 라인 번호는 5번까지
+            만약 grid-column:7을 하게 되면 위치는 이동되지만 너비를 가지지 못할 수 있다
+        */
+
+        /* .item:nth-child(1) {
+            grid-column: 1/3;
+        }
+
+        .item:nth-child(2) {
+            grid-row: 2/4;
+            grid-column: 2/3;
+        }
+
+        .item:nth-child(5) {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        .item:nth-child(6) {
+            grid-row: 6;
+            grid-column: 1;
+        } */
+
+        /* #container3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 80px;
+            gap: 10px;
+        }
+
+        .item:nth-child(1) {
+            grid-row: 1/3;
+        }
+        
+        .item:nth-child(4) {
+            grid-column: 3/4;
+            grid-row: 1/3;
+        }
+
+        
+        .item:nth-child(7) {
+            grid-column: 1/4;
+            grid-row: 3;
+        }
+        .item:nth-child(5) {
+            grid-column: 2/4;
+            grid-row: 4;
+        } */
+
+        #container4 {
+            display: grid;
+            width: 800px;
+            grid-auto-rows: 50px;
+            gap: 10px;
+            grid-template-areas: 
+                "header header header"
+                "ad ad login"
+                "news news login"
+                ". . weather"
+                "shop shop weather"
+                ". . ."
+                "footer footer footer"
+            ;
+        }
+
+        #container4 .item:nth-child(1) {grid-area: header;}
+        #container4 .item:nth-child(2) {grid-area: ad;}
+        #container4 .item:nth-child(3) {grid-area: login;}
+        #container4 .item:nth-child(4) {grid-area: news;}
+        #container4 .item:nth-child(5) {grid-area: weather;}
+        #container4 .item:nth-child(6) {grid-area: shop;}
+        #container4 .item:nth-child(7) {grid-area: footer;}
+    </style>
+
+    <!-- 
+        grid
+            부모태그 : grid container
+            자식태그 : grid item
+            그리드 트랙 : 행 또는 열
+            그리드 셀 : 그리드 영역 안에 한 칸 한 칸의 공간
+            그리드 라인 : 그리드 셀을 구분하는 선
+            그리드 번호 : 그리드 라인을 구분하는 번호
+            그리드 갭 : 셀 사이 간격
+            그리드 영역 : 그리드 라인으로 구성된 영역
+
+            flex에서 justify > 컨테이너, align > 아이템
+
+            grid 속성
+                행 : grid-template-rows
+                열 : grid-template-columns
+     -->
+</head>
+
+<body>
+    <h3>grid 영역 지정 두 번째 방법 - area</h3>
+    <div id="container4">
+        <div class="item" style="background-color: red;">1</div>
+        <div class="item" style="background-color: orangered;">2</div>
+        <div class="item" style="background-color: yellow;">3</div>
+        <div class="item" style="background-color: green;">4</div>
+        <div class="item" style="background-color: blue;">5</div>
+        <div class="item" style="background-color: purple;">6</div>
+        <div class="item" style="background-color: plum;">7</div>
+    </div>
+
+    <!-- <h3>grid 영역 실습 </h3>
+    <div id="container3">
+        <div class="item" style="background-color: red;">1</div>
+        <div class="item" style="background-color: orangered;">2</div>
+        <div class="item" style="background-color: yellow;">3</div>
+        <div class="item" style="background-color: green;">4</div>
+        <div class="item" style="background-color: blue;">5</div>
+        <div class="item" style="background-color: purple;">6</div>
+        <div class="item" style="background-color: plum;">7</div>
+    </div> -->
+
+    <!-- <div id="container">
+        <div class="item" style="background-color: red;">1</div>
+        <div class="item" style="background-color: orangered;">2</div>
+        <div class="item" style="background-color: yellow;">3</div>
+        <div class="item" style="background-color: green;">4</div>
+        <div class="item" style="background-color: blue;">5</div>
+        <div class="item" style="background-color: purple;">6</div>
+        <div class="item" style="background-color: plum;">7</div>
+    </div>
+
+    <h3>grid 셀 영역</h3>
+    <div id="container2">
+        <div class="item" style="background-color: red;">1</div>
+        <div class="item" style="background-color: orangered;">2</div>
+        <div class="item" style="background-color: yellow;">3</div>
+        <div class="item" style="background-color: green;">4</div>
+        <div class="item" style="background-color: blue;">5</div>
+        <div class="item" style="background-color: purple;">6</div>
+        <div class="item" style="background-color: plum;">7</div>
+    </div> -->
+</body>
+
+</html>
