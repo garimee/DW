@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프리덤</title>
+    <title>로그인</title>
 
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 
@@ -12,6 +12,9 @@
 
     <link rel="icon" href="./static/images/logo.ico">
     <link rel="stylesheet" href="./static/css/default.css">
+    <link rel="stylesheet" href="./static/css/signin.css">
+
+    <script src="./static/javascript/signin.js"></script>
 </head>
 
 <body>
@@ -63,6 +66,38 @@
                         </li>
                         <li class="menuItem">Customer</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="loginWrap">
+                <div class="logo">
+                    <img src="./static/images/logo.png">
+                </div>
+                <div class="title">
+                    <h2>LOGIN</h2>
+                </div>
+                <div class="loginBox">
+                    <form method="post" action="signIn" name="loginfm" id="loginfm">
+                        <div class="login">
+                            <div class="loginId">
+                                <input type="text" name="id" id="id">
+                                <label><i class="bi bi-person"></i></label>
+                            </div>
+                            <div class="loginPw">
+                                <input type="password" name="pw" id="pw">
+                                <label><i class="bi bi-key-fill"></i></label>
+                            </div>
+                            <div class="loginBt">
+                                <button type="button">LOGIN</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="memberNav">
+                    <p><a href="">아이디/비밀번호 찾기</a></p>
+                    <p><a href="signup.html">회원가입</a></p>
                 </div>
             </div>
         </div>
