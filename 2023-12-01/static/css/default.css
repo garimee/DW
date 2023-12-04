@@ -41,7 +41,7 @@ table {
     text-align: center;
 }
 
-input [type=text], input[type=password], input[type=email], input[type=number] {
+input[type=text], input[type=password], input[type=email], input[type=number] {
     padding: 5px 10px;
     outline: none;
     border: 0;
