@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var weight = parseInt(document.getElementById("weight").value);
+        var height = parseInt(document.getElementById("height").value);
+
+        function bmi() {
+            var total = weight / ((height / 100) * (height / 100));
+            if (total <= 18.5) {
+                alert("저체중");
+            } else if (18.5 <= total <= 22.9) {
+                alert("정상");
+            } else if (23.0 <= total <= 24.9) {
+                alert("과체중");
+            } else if (total >= 25.0) {
+                alert("비만");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="weight">
+    <input type="text" id="height">
+    <button onclick="bmi()">BMI 계산</button>
+</body>
+
+</html>
