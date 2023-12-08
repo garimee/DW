@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="#">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        // var xml = new XMLHttpRequest();
+        // xml.onload = function() {
+        //     var data = JSON.parse(this.responseText);
+        //     document.write(data.name + " " + data.취미);
+        // }
+        // xml.open("GET", "http://krdrive.ipdisk.co.kr:8000/test/aaa.php");
+        // xml.send();
+
+        $.getJSON("./data/game.json", function(data) {
+            show(data);
+        });
+
+        function show(data) {
+            $("#view").html(`<h3>${data.name}</h3>`);
+        }
+    </script>
+</head>
+
+<body>
+ 
+</body>
+
+</html>
+
+<!-- 
+    json - javascript Object notation
+ -->
