@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script>
+        function sugar() {
+                var v = getBlood();
+                var out = "정상 혈당";
+                if (70 <= v && v <= 100)
+                    out+= "공복 혈당";
+                else if (90 <= v && v <= 140)
+                    out+= "식후 2시간 혈당";
+
+                if(66.1 > v)
+                    out = "당화혈색소";
+                $("#resblood").text(out);
+                
+            }
+      
+        function getBlood() {
+            var v = Number($("#bl").val());
+            return v;
+        }
+
+
+        function bmi() {
+            var tall = Number($("#tall").val());
+            var wg = Number($("#wg").val());
+
+            var idx = wg / ((tall / 100) * (tall / 100));
+            var out = "저체중";
+
+            if(idx >=25) out = "비만";
+            else if(idx >= 23) out = "과체중";
+            else if(idx >= 18.5) out = "정상";
+
+            $("#obesity").text(out);
+        }
+        
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="bl">
+    <button onclick="sugar()">혈당 수치</button>
+    <div id="resblood"></div>
+    <br><br>
+
+    <input type="text" id="tall" placeholder="키">
+    <input type="text" id="wg" placeholder="몸무게">
+    <button onclick="bmi()">계산</button>
+    <div id="obesity"></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./static/css/game.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="./static/javascript/game.js"></script>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="comView">
+            <div class="com">
+                <img id="comImg">
+            </div>
+        </div>
+        <div id="userView">
+            <div class="user scissors"><img src="./static/images/scissors.png" alt="가위"></div>
+            <div class="user rock"><img src="./static/images/rock.png" alt="바위"></div>
+            <div class="user paper"><img src="./static/images/paper.png" alt="보"></div>
+        </div>
+        <div id="result">
+            <div class="bt"> <button id="start">시작</button></div>
+            <div class="res"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+컴퓨터와 대결 구도를 갖춘 가위바위보 만들기
+화면의 왼쪽에는 컴퓨터 가위바위보 이미지 0.3초 간격으로 바뀌기
+화면의 오른쪽에는 내 거 가위바위보 이미지 3장 넣기
+내가 가위바위보 이미지를 클릭하면 컴퓨터 이미지도 멈추고 결과를 화면 중앙에 표시하기
+setInterval 사용 -->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 객체 생성 방법과 객체에 함수(메서드)를 정의, 실행하는 방법
+        // 객체를 사용하는 이유는 데이터를 체계적으로 관리하기 위해 많은 양의 데이터를 다룰 때 각각의 데이터들의 명칭을 지정해 주면 데이터 찾기, 데이터 저장, 데이터 가공하기가 보다 편하다
+
+        // 자바스크립트 객체를 생성하는 방법
+        var animal = {};  // var animal = new Object();
+        animal.kind = '강아지';
+        animal.age = 4;
+
+        var animal1 = {
+            종: '토끼',
+            age: 3
+        };
+        animal1.먹이 = '풀';
+
+        // function을 이용한 객체 생성
+        function dog(품종, 크기, 특징) {  // 객체 생성자 함수
+            this.품종 = 품종;
+            this.크기 = 크기;
+            this.특징 = 특징;
+        }
+
+        dog.prototype.view = function() {
+            document.write(this.품종 + " " + this.크기 + " " + this.특징);
+        }
+
+        dog.prototype.종 = "개";
+
+        var d1 = new dog("말티즈", "소형", "장난끼");   // 생성자 함수를 통해 객체 생성
+        var d2 = new dog("먹푸들", "중형", "똑똑이");
+        var d3 = new dog("진돗개", "중형", "순종");
+        // alert(d1.품종);   // 연산자 순위 - () > [] > . > ->
+        // alert(d1['크기']);
+        d1.view();
+        d2.view();
+        d3.view();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

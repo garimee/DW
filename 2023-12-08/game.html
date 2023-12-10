@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        var xml = new XMLHttpRequest();
+
+        xml.onload = function () {
+    var data = JSON.parse(this.responseText) // JSON.parse() - json 문자열 값을 객체로 변환
+    document.getElementById("view").innerHTML=`<div> 캐릭터명 : ${data.name}</div>
+                                               <div> 힘 : ${data.힘}  민첩 : ${data.민첩}  생명 : ${data.생명} 지능 : ${data.지능}</div>
+                                               <div> hp : ${data.hp}  mp : ${data.mp} </div>`;
+}
+    xml.open("GET", "./data/game.json");
+    xml.send();
+
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
