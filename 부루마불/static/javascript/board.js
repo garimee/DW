@@ -109,7 +109,7 @@ function change_pcl() {
 }
 
 $(function() {
-    zone_create();
+    zone_create(); // 지우기
     zone_draw();
 
     $("#enroll").on("click", game_init);
